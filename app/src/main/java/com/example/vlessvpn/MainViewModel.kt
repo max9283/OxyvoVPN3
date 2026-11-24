@@ -139,7 +139,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         return true
     }
 
-    fun setPreferredList(group: Int) {
+    fun updatePreferredList(group: Int) {
         preferredList = if (group == 2) 2 else 1
         storage.preferredList = preferredList
     }

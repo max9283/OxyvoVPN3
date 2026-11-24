@@ -44,9 +44,9 @@ fun ServersScreen(vm: MainViewModel) {
             Text("Какую группу использовать в первую очередь?", style = MaterialTheme.typography.bodySmall, color = Oxyvo.Muted)
             Text("Группы серверов назначаются вручную кнопкой «В Ч.С.» / «В Б.С.»: без заданной сети и критерия приложение не может достоверно определить, какие серверы проходят внешний белый или чёрный список.", style = MaterialTheme.typography.bodySmall, color = Oxyvo.Muted)
             Row(verticalAlignment = Alignment.CenterVertically) {
-                RadioButton(selected = vm.preferredList == 1, onClick = { vm.setPreferredList(1) })
+                RadioButton(selected = vm.preferredList == 1, onClick = { vm.updatePreferredList(1) })
                 Text("Белый список")
-                RadioButton(selected = vm.preferredList == 2, onClick = { vm.setPreferredList(2) })
+                RadioButton(selected = vm.preferredList == 2, onClick = { vm.updatePreferredList(2) })
                 Text("Чёрный список")
             }
         }
